@@ -1,0 +1,92 @@
+#map {
+    height: 120vh !important;
+}
+
+.fab {
+    position: fixed;
+    bottom: 20px;
+    left: 30%;
+    z-index: 99;
+    border-radius: 50px;
+    /*left: auto !important;*/
+}
+
+@media (min-width: 576px) {
+    .fab {
+        left: 35%;
+    }
+}
+
+@media (min-width: 768px) {
+    .fab {
+        left: 37%;
+    }
+}
+
+@media (min-width: 992px) {
+    .fab {
+        left: 41%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fab {
+        left: 43%;
+    }
+}
+
+
+/* Optional: Makes the sample page fill the window. */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    left: 0px !important;
+}
+
+#address {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    border-radius: 50px;
+    width: 93vw !important;
+}
+
+#pac-latlng {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    border-radius: 50px;
+    width: 93vw !important;
+}
+
+#address:focus {
+    border-color: #4d90fe;
+}
+
+#infowindow-content {
+    display: none !important;
+}
+
+footer {
+    display: none !important;
+}

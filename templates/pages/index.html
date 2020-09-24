@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pac-card" id="pac-card">
+	<div id="pac-container">
+		<form method="POST">
+		{% csrf_token %}
+		<input id="address" type="text" class="form-control" placeholder="Search a location..." name="address">
+		<input id="pac-latlng" type="text" class="form-control" placeholder="Your coordinates" name="coordinates">
+		<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
+<div id="map" class="mt-5"></div>
+
+
+ 
+<script
+	src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&libraries=places&callback=initAutocomplete"
+	async defer></script>
+
+{% endblock %}
