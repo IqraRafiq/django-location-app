@@ -1,17 +1,13 @@
 // Initialize and add the map
 function initAutocomplete() {
     // console.log("again");
-    navigator.geolocation.getCurrentPosition(function(response) {
-        //html ids
-        var card = document.getElementById('pac-card');
-        var input = document.getElementById('address');
-        var center;
-        if (response) {
-            center = new google.maps.LatLng(response.coords.latitude, response.coords.longitude);
-        } else {
-            center = new google.maps.LatLng(28.48778845498256, 1.6661940499999917);
-        }
-        console.log(center);
+    var card = document.getElementById('pac-card');
+    var input = document.getElementById('address');
+    var center;
+    loc(function(data) {
+
+        center = data.center;
+
         var mapOptions = {
             // center: new google.maps.LatLng(response.coords.latitude, response.coords.longitude),
             center: center,
@@ -58,13 +54,26 @@ function initAutocomplete() {
 
         });
         drag(map, marker);
-    });
 
+    });
 }
 
 
 
+function loc(callback) {
+    var center;
+    if (navigator.geolocation.getCurrentPosition) {
+        navigator.geolocation.getCurrentPosition(function(response) {
 
+            center = new google.maps.LatLng(response.coords.latitude, response.coords.longitude);
+            callback({ center: center });
+        });
+    } else {
+        center = new google.maps.LatLng(28.48778845498256, 1.6661940499999917);
+        callback({ center: center });
+    }
+
+}
 
 
 
