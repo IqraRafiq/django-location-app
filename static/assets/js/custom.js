@@ -1,7 +1,9 @@
 // Initialize and add the map
 function initAutocomplete() {
+    console.log('hello');
     navigator.geolocation.getCurrentPosition(function(response) {
         //html ids
+        console.log(response);
         var card = document.getElementById('pac-card');
         var input = document.getElementById('address');
         console.log(response.coords.latitude);
@@ -52,9 +54,6 @@ function initAutocomplete() {
         drag(map, marker);
     });
 
-    function newFunction(marker) {
-        console.log(marker.getPosition());
-    }
 }
 
 
