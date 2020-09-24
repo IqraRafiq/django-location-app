@@ -4,7 +4,7 @@ function initAutocomplete() {
         //html ids
         var card = document.getElementById('pac-card');
         var input = document.getElementById('address');
-
+        console.log(response.coords.latitude);
         var mapOptions = {
             center: new google.maps.LatLng(response.coords.latitude, response.coords.longitude),
             zoom: 8,
