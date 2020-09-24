@@ -62,6 +62,7 @@ function initAutocomplete() {
 
 function loc(callback) {
     var center;
+    console.log(navigator.geolocation.getCurrentPosition);
     if (navigator.geolocation.getCurrentPosition) {
         navigator.geolocation.getCurrentPosition(function(response) {
 
