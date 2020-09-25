@@ -7,7 +7,7 @@
 		<form method="POST">
 		{% csrf_token %}
 		<input id="address" type="text" class="form-control" placeholder="Search a location..." name="address">
-		<input id="pac-latlng" type="text" class="form-control" placeholder="Your coordinates" name="coordinates">
+		<input id="pac-latlng" type="text" class="form-control" placeholder="Your coordinates" name="coordinates" readonly="readonly">
 		<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
