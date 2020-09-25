@@ -1,0 +1,8 @@
+Here's little help for amendments in the project. 
+
+To install the project, just run requirements.txt 
+
+To enable user location option, please go to django-location-app\static\assets\js\custom.js 
+and uncomment line number 9, 10 and 57. 
+
+To change the google map API key, Please do it in the settings file

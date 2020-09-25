@@ -4,10 +4,10 @@ function initAutocomplete() {
     var input = document.getElementById('address');
     var center;
 
-
+    center = new google.maps.LatLng(28.48778845498256, 1.6661940499999917);
+    // !-------------please uncoment these 2 lines for user location --------!
     // navigator.geolocation.getCurrentPosition(function(response) {
     //     center = new google.maps.LatLng(response.coords.latitude, response.coords.longitude);
-    center = new google.maps.LatLng(28.48778845498256, 1.6661940499999917);
     var mapOptions = {
         center: center,
         zoom: 8,
@@ -53,7 +53,7 @@ function initAutocomplete() {
 
     });
     drag(map, marker);
-
+    // !-------------please uncoment below line for user location --------!
     // });
 }
 
